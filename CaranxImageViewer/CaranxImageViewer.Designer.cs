@@ -62,6 +62,9 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
+            this.pictureBox1.MouseDown += pictureBox1_MouseDown;
+            this.pictureBox1.MouseMove += pictureBox1_MouseMove;
+            this.pictureBox1.MouseUp += pictureBox1_MouseUp;
             // 
             // vScrollBar1
             // 
