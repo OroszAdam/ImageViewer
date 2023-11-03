@@ -212,7 +212,7 @@ namespace CaranxImageViewer
         {
             curvePath = new GraphicsPath();
 
-            curvePath.AddLines(points.ToArray());
+            curvePath.AddClosedCurve(points.ToArray());
             
             using (var id = new Matrix(1, 0, 0, 1, 0, 0))
             {
@@ -252,6 +252,7 @@ namespace CaranxImageViewer
                     area += rc.Width * rc.Height * pixelinMM * pixelinMM;
                 Debug.WriteLine("Area = " + area);
 
+                // Fill regions, just to see better the shape
                 graphics.FillRegion(Brushes.Green, region);
                 return area;
             }
